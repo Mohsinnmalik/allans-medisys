@@ -308,8 +308,7 @@
 					email: true
 				},
 				phone:{
-					required: true,
-					digits: true,
+					required: true
 				}
 			},
 			messages: {
@@ -333,8 +332,7 @@
 					email: true
 				},
 				phone:{
-					required: true,
-					digits: true,
+					required: true
 				},
 				date: "required",
 				select: "required",
@@ -361,8 +359,7 @@
 					email: true
 				},
 				phone:{
-					required: true,
-					digits: true,
+					required: true
 				},
 				select: "required",
 				subject: "required",
@@ -391,8 +388,7 @@
 					email: true
 				},
 				phone:{
-					required: true,
-					digits: true,
+					required: true
 				},
 				message: "required",
 			},

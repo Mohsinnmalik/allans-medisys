@@ -104,18 +104,30 @@ video {
 }
 
 .wsmainfull {
-  width: 100%;
-  height: 80px;
-  background-color: #fff!important;
-  z-index: 999;
-  -webkit-box-shadow: 0 2px 3px rgba(96, 96, 96, .1);
-  -moz-box-shadow: 0 2px 3px rgba(96, 96, 96, .1);
-  box-shadow: 0 2px 3px rgba(96, 96, 96, .1);
-  -webkit-transition: all 450ms ease-in-out;
-  -moz-transition: all 450ms ease-in-out;
-  -o-transition: all 450ms ease-in-out;
-  -ms-transition: all 450ms ease-in-out;
-  transition: all 450ms ease-in-out; 
+    width: 100%;
+    height: 80px;
+    background-color: #fff !important;
+    z-index: 999;
+    position: relative;
+    -webkit-box-shadow: 0 2px 3px rgba(96, 96, 96, .1);
+    -moz-box-shadow: 0 2px 3px rgba(96, 96, 96, .1);
+    box-shadow: 0 2px 3px rgba(96, 96, 96, .1);
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out; 
+}
+
+.wsmainfull.is-sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+    background-color: #ffffff !important;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12) !important;
 }
 .steelwhite-color {color: #fff;font-weight: 600 !important;}
 .steelwhite-color span {color: #fff;font-weight: 500 !important;font-size:40px;}
@@ -182,15 +194,22 @@ max-width: 1140px;
 
 .wsmenu > .wsmenu-list > li > a {
   display: block;
-  padding:15px 30px 15px 9px;
+  padding: 15px 12px 15px 12px;
   line-height: 50px;
-  text-decoration: none;font-size: 16px;
-  position: relative;    font-weight: 600;
-    letter-spacing: 0.1px;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+.wsmenu > .wsmenu-list > li:has(.wsarrow) > a,
+.wsmenu > .wsmenu-list > li > a:has(.wsarrow) {
+  padding-right: 20px;
 }
 
 #header-2 .wsmenu > .wsmenu-list > li > a {
-  padding: 10px 40px 10px 10px;
+  padding: 10px 25px 10px 10px;
 }
 
 .wsmenu > .wsmenu-list > li:last-child > a {
@@ -204,12 +223,9 @@ max-width: 1140px;
   color: #fff!important;
   line-height: 30px;
   text-transform: capitalize;
-    margin-top:20px;
-  margin-left:25px;
-  padding: 5px 15px 5px 15px;
- /* -webkit-border-radius: 4px;
-  -moz-border-radius: 4px
-  border-radius: 4px;*/
+  margin-top: 24px;
+  margin-left: 10px;
+  padding: 5px 14px 5px 14px;
 }
 
 .wsmenu > .wsmenu-list > li.header-btn.green-btn a {
@@ -275,12 +291,12 @@ max-width: 1140px;
   border-top: 4px solid;
   content: "";
   float: right;
-  right: 15px;
+  right: 8px;
   height: 0;
-  margin: 0 0 0 14px;
+  margin: 0;
   position: absolute;
   text-align: right;
-  top: 34px;
+  top: 38px;
   width: 0;
 }
 
@@ -891,22 +907,23 @@ max-width: 1140px;
     width: 100%;
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     left: 0;
-    overflow-y: hidden;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
     padding: 0;
     top: 0;
     visibility: hidden;
     position: fixed;
     margin: 0px;
+    height: 100vh !important;
+    max-height: 100vh !important;
   }
 
   .wsmenu>.wsmenu-list {
     height: auto;
     min-height: 100%;
-    width: 240px;
     width: 300px;
     background: #fff;
-    padding-bottom: 0;
-    margin-left: -240px;
+    padding-bottom: 120px !important;
     margin-left: -300px;
     display: block;
     text-align: center;
@@ -915,6 +932,9 @@ max-width: 1140px;
     -o-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    max-height: 100vh;
   }
 
   .wsmenu>.wsmenu-list>li {
@@ -1409,11 +1429,13 @@ max-width: 1140px;
   }
 
   .wsactive .wsmenu {
-    overflow-y: scroll;
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     visibility: visible;
-    z-index: 1000;
+    z-index: 10002 !important;
     top: 0;
+    height: 100vh !important;
+    max-height: 100vh !important;
   }
 
   .wsactive .wsmenu>.wsmenu-list {
@@ -1423,6 +1445,10 @@ max-width: 1140px;
     -ms-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     margin-left: 0;
+    padding-bottom: 120px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    max-height: 100vh !important;
   }
 
   /* ================== Mobile Sub Menu Expander Arrows  ================== */

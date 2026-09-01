@@ -93,87 +93,97 @@
                 clear: both;
                 display: block;
                 z-index: 10;
-                padding: 0 5%;
+                padding: 0 4%;
             }
             .featured-card {
                 background: #fff;
-                border-radius: 30px;
-                box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+                border-radius: 20px;
+                box-shadow: 0 16px 40px rgba(24,49,89,0.08);
                 display: flex;
                 overflow: hidden;
-                transition: transform 0.4s ease;
+                transition: transform 0.35s ease, box-shadow 0.35s ease;
                 width: 100%;
+                max-width: 1100px;
+                margin: 0 auto;
+                border: 1px solid #eef1f6;
+                align-items: stretch;
             }
             .featured-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 30px 60px rgba(0,123,255,0.15);
+                transform: translateY(-6px);
+                box-shadow: 0 24px 50px rgba(0,123,255,0.12);
             }
             .featured-img {
-                width: 55%;
-                background: #fff;
+                width: 42%;
+                background: #f8fafc;
                 position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                min-height: 280px;
+                max-height: 380px;
             }
             .featured-img img {
-                width: 100%;
-                height: 100%;
-                min-height: 400px;
+                max-width: 90%;
+                max-height: 330px;
+                width: auto;
+                height: auto;
                 object-fit: contain;
-                padding: 30px;
-                transition: transform 0.6s ease;
+                padding: 15px;
+                transition: transform 0.5s ease;
             }
             .featured-card:hover .featured-img img {
-                transform: scale(1.03);
+                transform: scale(1.04);
             }
             .featured-content {
-                width: 45%;
-                padding: 50px;
+                width: 58%;
+                padding: 40px 45px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                background: #fdfdfd;
+                background: #ffffff;
             }
             .custom-badge {
                 display: inline-block;
-                padding: 6px 14px;
-                background: rgba(0,123,255,0.1);
-                color: #007bff;
+                padding: 5px 14px;
                 border-radius: 20px;
                 font-weight: 700;
-                font-size: 13px;
-                letter-spacing: 1px;
+                font-size: 12px;
+                letter-spacing: 0.8px;
                 text-transform: uppercase;
-                margin-bottom: 15px;
+                margin-bottom: 12px;
+                align-self: flex-start;
             }
             .featured-content h2 {
-                font-size: 36px;
+                font-size: 30px;
                 font-weight: 800;
                 color: #183159;
-                margin-bottom: 15px;
-                line-height: 1.2;
+                margin-bottom: 12px;
+                line-height: 1.25;
             }
             .featured-content p {
-                font-size: 17px;
-                color: #666;
-                line-height: 1.7;
-                margin-bottom: 25px;
+                font-size: 16px;
+                color: #555;
+                line-height: 1.65;
+                margin-bottom: 22px;
             }
             .btn-read-custom {
                 display: inline-flex;
                 align-items: center;
                 color: #fff !important;
                 background: #007bff;
-                padding: 12px 28px;
+                padding: 11px 26px;
                 border-radius: 30px;
                 font-weight: 700;
-                font-size: 15px;
+                font-size: 14px;
                 text-transform: uppercase;
-                letter-spacing: 1px;
+                letter-spacing: 0.5px;
                 transition: all 0.3s ease;
                 align-self: flex-start;
             }
             .btn-read-custom:hover {
                 background: #183159;
-                transform: translateX(5px);
+                transform: translateX(4px);
             }
             .btn-read-custom i {
                 margin-left: 8px;
@@ -181,37 +191,43 @@
 
             .newsroom-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-                gap: 30px;
-                padding: 80px 5%;
-                max-width: 1400px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 26px;
+                padding: 50px 4%;
+                max-width: 1200px;
                 margin: 0 auto;
             }
             .news-card {
                 background: #fff;
-                border-radius: 20px;
+                border-radius: 18px;
                 overflow: hidden;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-                transition: all 0.4s ease;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+                transition: all 0.35s ease;
                 display: flex;
                 flex-direction: column;
-                border: 1px solid #f0f0f0;
+                border: 1px solid #edf0f5;
+                height: 100%;
             }
             .news-card:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 20px 40px rgba(0,123,255,0.1);
+                transform: translateY(-6px);
+                box-shadow: 0 16px 36px rgba(0,123,255,0.09);
             }
             .news-card-img {
-                height: 250px;
-                background: #fff;
+                height: 220px;
+                background: #f8fafc;
                 overflow: hidden;
-                padding: 20px;
+                padding: 16px;
                 position: relative;
-                border-bottom: 1px solid #f0f0f0;
+                border-bottom: 1px solid #edf0f5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .news-card-img img {
-                width: 100%;
-                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
                 object-fit: contain;
                 transition: transform 0.5s ease;
             }
@@ -219,31 +235,31 @@
                 transform: scale(1.05);
             }
             .news-card-content {
-                padding: 30px;
+                padding: 24px;
                 flex-grow: 1;
                 display: flex;
                 flex-direction: column;
             }
             .news-card-content h3 {
-                font-size: 22px;
-                font-weight: 800;
+                font-size: 20px;
+                font-weight: 700;
                 color: #183159;
-                margin-bottom: 12px;
+                margin-bottom: 10px;
                 line-height: 1.3;
             }
             .news-card-content p {
                 color: #666;
-                font-size: 15px;
-                line-height: 1.7;
-                margin-bottom: 20px;
+                font-size: 14.5px;
+                line-height: 1.6;
+                margin-bottom: 18px;
                 flex-grow: 1;
             }
             .news-link-custom {
                 color: #007bff;
                 font-weight: 700;
-                font-size: 15px;
+                font-size: 14px;
                 text-transform: uppercase;
-                letter-spacing: 1px;
+                letter-spacing: 0.5px;
                 transition: color 0.3s;
                 display: inline-flex;
                 align-items: center;
@@ -252,20 +268,41 @@
                 color: #183159;
             }
             .news-card:hover .news-link-custom i {
-                transform: translateX(5px);
+                transform: translateX(4px);
             }
             .news-link-custom i {
                 margin-left: 8px;
                 transition: transform 0.3s;
             }
 
+            @media (max-width: 1199px) {
+                .newsroom-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 22px;
+                }
+            }
+
             @media (max-width: 991px) {
-                .newsroom-hero h1 { font-size: 42px; }
-                .featured-card { flex-direction: column; }
-                .featured-img, .featured-content { width: 100%; }
-                .featured-img img { min-height: 250px; }
-                .featured-content { padding: 30px 20px; }
-                .newsroom-grid { grid-template-columns: 1fr; padding: 50px 5%; }
+                .newsroom-hero { padding: 50px 0 70px; }
+                .newsroom-hero h1 { font-size: 36px; }
+                .newsroom-hero p { font-size: 16px; }
+                .featured-post-wrapper { margin-top: -35px; }
+                .featured-card { flex-direction: column; max-height: none; }
+                .featured-img { width: 100%; min-height: 220px; max-height: 260px; }
+                .featured-img img { max-height: 220px; padding: 15px; }
+                .featured-content { width: 100%; padding: 28px 20px; }
+                .featured-content h2 { font-size: 22px; }
+                .featured-content p { font-size: 15px; margin-bottom: 18px; }
+                .newsroom-grid { grid-template-columns: 1fr; padding: 35px 15px; gap: 20px; }
+                .news-card-img { height: 200px; }
+                .news-card-content { padding: 20px 16px; }
+            }
+
+            @media (max-width: 480px) {
+                .newsroom-hero h1 { font-size: 28px; }
+                .featured-content { padding: 20px 15px; }
+                .featured-content h2 { font-size: 20px; }
+                .btn-read-custom { width: 100%; justify-content: center; }
             }
         </style>
 	</head>
@@ -407,15 +444,15 @@
 
             <div class="featured-post-wrapper">
                 <div class="container-fluid" style="max-width: 1200px;">
-                    <a href="blog-hs40.html" style="text-decoration: none;">
+                    <a href="blog-hera-z20.html" style="text-decoration: none;">
                         <div class="featured-card wow zoomIn" data-wow-delay="0.2s">
                             <div class="featured-img">
-                                <img src="https://www.samsunghealthcare.com/upload/56a67960-c956-4f38-bd97-db5dbd4327b0.png" onerror="this.src='images/sonography.png'" alt="Samsung HS40">
+                                <img src="images/blog/hera-featured.jpg" alt="Samsung HERA Z20">
                             </div>
                             <div class="featured-content">
-                                <div><span class="custom-badge">Featured Innovation</span></div>
-                                <h2>Samsung HS40 Ultrasound Machine</h2>
-                                <p>Experience the perfect harmony of CrystalLive™ AI-assisted imaging and ergonomic design, tailored specifically for routine Obstetrics, Gynecology, and comprehensive Women's Health examinations.</p>
+                                <div><span class="custom-badge" style="background: rgba(214,51,132,0.15); color: #d63384;">Flagship Women's Health</span></div>
+                                <h2>Samsung HERA Z20 Ultrasound System</h2>
+                                <p>Empowering women with vision. Experience 2nd Generation Crystal Architecture™, deep-learning clinical AI tools, and an immersive 27" OLED monitor engineered for maternal-fetal and gynecological diagnostic excellence.</p>
                                 <span class="btn-read-custom">Read Full Article <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
@@ -425,6 +462,36 @@
 
             <section class="newsroom-grid">
                 
+                <!-- Flat Panel C-Arm -->
+                <a href="blog-flat-panel-c-arm.html" style="text-decoration: none;">
+                    <div class="news-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="news-card-img">
+                            <img src="images/blog/carm-main.jpg" alt="Flat Panel C-Arm MENTOR-FP" style="object-fit: contain; background: #fff;">
+                        </div>
+                        <div class="news-card-content">
+                            <div><span class="custom-badge" style="background: rgba(0,163,200,0.15); color: #00a3c8;">Surgical Fluoroscopy</span></div>
+                            <h3>Flat Panel C-Arm (MENTOR-FP)</h3>
+                            <p>Next-generation mobile fluoroscopy featuring a 40 kHz High Frequency generator and advanced Flat Panel Detector (FPD) for crystal-clear, distortion-free imaging at significantly lower radiation doses.</p>
+                            <span class="news-link-custom">Explore Flat Panel C-Arm <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- HS40 -->
+                <a href="blog-hs40.html" style="text-decoration: none;">
+                    <div class="news-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="news-card-img">
+                            <img src="https://www.samsunghealthcare.com/upload/56a67960-c956-4f38-bd97-db5dbd4327b0.png" onerror="this.src='images/sonography.png'" alt="Samsung HS40">
+                        </div>
+                        <div class="news-card-content">
+                            <div><span class="custom-badge">Featured Innovation</span></div>
+                            <h3>Samsung HS40 Ultrasound Machine</h3>
+                            <p>Experience the perfect harmony of CrystalLive™ AI-assisted imaging and ergonomic design, tailored specifically for routine Obstetrics, Gynecology, and comprehensive Women's Health examinations.</p>
+                            <span class="news-link-custom">Explore HS40 <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
                 <!-- HS30 -->
                 <a href="blog-hs30.html" style="text-decoration: none;">
                     <div class="news-card wow fadeInUp" data-wow-delay="0.1s">
